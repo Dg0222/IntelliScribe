@@ -7,6 +7,7 @@
     align-items: center;
     justify-content: center;
     margin-top: 4%;
+    
   }
   nb-card {
     width: 80vh;
@@ -24,10 +25,10 @@
     justify-content: center;
     margin-left: 38%;
   }
-  .image-preview-container {
-    display: flex;
+  .image-preview-container{ 
     align-items: center;
     justify-content: center;
+    display: flex;
   }
 
   .text-area {
@@ -41,4 +42,11 @@
     background-color: rgb(34, 43, 69);
     border: none;
   }
+
+  .imagefile{
+    width: 65%;
+    height: 65%;
+    display: flex;
+  }
+
 }
