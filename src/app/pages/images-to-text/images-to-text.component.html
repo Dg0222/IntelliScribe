@@ -1,20 +1,49 @@
-
-  
-  <div class="content" role="main">
-    
-    <div>
-      <div class="page-space"></div>
-    </div>
-
-     <h2>Welcome to the World of Transcribing!</h2>
-    
-    <div class="card-container">
-      <a class="card" target="_blank" rel="noopener" href="">
-        <span>Continue</span>
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>    </a>
-    </div>
-  
-    <input type="hidden" #selection>
-  
-  </div>
-  
+<div class="container">
+  <form [formGroup]="form">
+    <nb-card>
+      <nb-card-header style="display: flex; justify-content: space-between">
+        <div>Image-Scribe</div>
+        <input
+          style="align-self: flex-end"
+          nbInput
+          type="file"
+          class="file-upload"
+          (change)="convertImage($event)"
+          formControlName="file"
+        />
+      </nb-card-header>
+      <nb-card-body>
+        <div class="image-preview-container">
+          <img [src]="imageURL" />
+        </div>
+        <div class="button-container">
+          <button
+            nbButton
+            status="success"
+            [disabled]="buttonsDisabled"
+            (click)="sendImage()"
+          >
+            Transcribe
+          </button>
+          &nbsp;
+          <button
+            nbButton
+            status="danger"
+            [disabled]="buttonsDisabled"
+            (click)="reset()"
+          >
+            Reset
+          </button>
+        </div>
+      </nb-card-body>
+      <nb-card-footer>
+        <textarea
+          class="text-area"
+          nbInput
+          fullWidth
+          formControlName="text"
+        ></textarea>
+      </nb-card-footer>
+    </nb-card>
+  </form>
+</div>
