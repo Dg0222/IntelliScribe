@@ -6,6 +6,6 @@
 
 3. once you have the api key, create a new file in the shared folder root called "apiKey.ts"
 
-4. write "export const apiKey = '';" where the constant should be equal to your api key from your google cloud account. 
+4. write export const apiKey = ""; into the newly created apiKey.ts file where the constant should be equal to your api key from your google cloud account. 
 
 5. type in ng serve into the terminal to launch the web app.
